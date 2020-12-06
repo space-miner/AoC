@@ -1,4 +1,6 @@
+#!/usr/bin/env python3
 import re
+
 
 def passportify(data):
     ls = []
@@ -11,6 +13,7 @@ def passportify(data):
             acc += ln + ' '
     return ls
 
+
 def p1(data):
     pat = r'(\w+):(.*)'
     res = 0
@@ -20,6 +23,7 @@ def p1(data):
         if req <= set(d.keys()):
             res += 1
     return res
+
 
 def is_year(yr, s, e):
     return yr.isnumeric() and s <= int(yr) <= e
